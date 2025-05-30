@@ -377,7 +377,7 @@ section {
 }
 
 .about-intro {
-    text-align: center;
+    text-align: left;
     max-width: 800px;
     margin: 0 auto 4rem;
     padding: 3rem;
@@ -393,6 +393,7 @@ section {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .about-intro p {
@@ -407,6 +408,7 @@ section {
     font-weight: 600;
     color: #FF8C42;
     position: relative;
+    text-align: right;
 }
 
 .about-author::before {
@@ -476,6 +478,7 @@ section {
     color: #666;
     font-size: 1rem;
     line-height: 1.6;
+    text-align: left;
 }
 
 /* Reasons Section */
@@ -488,17 +491,23 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .reason-item {
-    text-align: center;
     background: linear-gradient(135deg, #f8f9fa, #ffffff);
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 1.5rem;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 400px;
 }
 
 .reason-item::before {
@@ -523,12 +532,14 @@ section {
 }
 
 .reason-image {
-    width: 240px;
-    height: 240px;
-    margin: 0 auto 1.5rem;
+    width: 180px;
+    height: 180px;
+    margin: 0 0 1.5rem 0;
     border-radius: 50%;
     overflow: hidden;
     border: 6px solid #FFB366;
+    flex-shrink: 0;
+    position: relative;
 }
 
 .reason-image img {
@@ -541,12 +552,15 @@ section {
     font-size: 1.4rem;
     color: #333;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .reason-item p {
     color: #666;
     font-size: 1rem;
     line-height: 1.6;
+    text-align: left;
+    width: 100%;
 }
 
 /* Work Section - 新しいデザイン */
@@ -1322,10 +1336,11 @@ section {
 }
 
 .contact-form {
-    max-width: 600px;
+    width: 80%;
+    max-width: none;
     margin: 0 auto;
     background: linear-gradient(135deg, #f8f9fa, #ffffff);
-    padding: 3rem;
+    padding: 2.25rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -1334,16 +1349,16 @@ section {
     text-align: center;
     color: #333;
     font-size: 1.6rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     color: #333;
     font-weight: 600;
 }
@@ -1356,7 +1371,7 @@ section {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 1rem;
+    padding: 0.75rem;
     border: 2px solid #e9ecef;
     border-radius: 10px;
     font-size: 1rem;
@@ -1374,9 +1389,11 @@ section {
 
 .btn-submit {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     font-size: 1.2rem;
-    padding: 1.2rem;
+    padding: 0.9rem;
+    text-align: center;
+    justify-content: center;
 }
 
 /* Footer */
