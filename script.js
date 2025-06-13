@@ -409,17 +409,6 @@ function typeWriter(element, text, speed = 100) {
   type();
 }
 
-// Initialize typing effect for hero title
-document.addEventListener("DOMContentLoaded", function () {
-  const heroTitle = document.querySelector(".title-main");
-  if (heroTitle) {
-    const originalText = heroTitle.textContent;
-    setTimeout(() => {
-      typeWriter(heroTitle, originalText, 80);
-    }, 1500);
-  }
-});
-
 // Add particle effect to background
 function createParticles() {
   const particleContainer = document.createElement("div");

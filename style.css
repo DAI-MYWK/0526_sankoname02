@@ -185,6 +185,7 @@ p {
     z-index: 1;
     max-width: 800px;
     padding: 0 2rem;
+    padding-top: 15vh;
 }
 
 .hero-title {
@@ -193,14 +194,14 @@ p {
 
 .title-main {
     display: block;
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     position: relative;
+    text-align: center;
+    line-height: 1.6;
 }
-
-
 
 .title-sub {
     display: block;
@@ -477,57 +478,32 @@ section {
 
 .reasons-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 3rem;
 }
 
 .reason-item {
-    background: linear-gradient(135deg, #f8f9fa, #ffffff);
-    padding: 2.5rem 1.5rem;
+    background: white;
+    padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 400px;
-}
-
-.reason-item::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 179, 102, 0.1) 0%, transparent 70%);
-    transition: all 0.3s ease;
-    transform: scale(0);
-}
-
-.reason-item:hover::before {
-    transform: scale(1);
+    min-width: 300px;
 }
 
 .reason-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .reason-image {
-    width: 180px;
-    height: 180px;
-    margin: 0 0 1.5rem 0;
-    border-radius: 50%;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
     overflow: hidden;
-    border: 6px solid #FFB366;
-    flex-shrink: 0;
-    position: relative;
 }
 
 .reason-image img {
@@ -537,18 +513,15 @@ section {
 }
 
 .reason-item h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #333;
     margin-bottom: 1rem;
-    text-align: center;
 }
 
 .reason-item p {
     color: #666;
     font-size: 1rem;
     line-height: 1.6;
-    text-align: left;
-    width: 100%;
 }
 
 /* Work Section - 新しいデザイン */
@@ -1679,4 +1652,66 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #FF8C42, #6BBF59);
+}
+
+/* 活動報告カセット型レイアウト */
+.report-cassette-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.report-cassette {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+  transition: box-shadow 0.2s;
+}
+.report-cassette:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+.report-cassette-image {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  background: #f7f7f7;
+}
+.report-cassette-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.report-cassette-content {
+  text-align: center;
+}
+.report-cassette-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.report-cassette-content p {
+  font-size: 0.98rem;
+  color: #555;
+}
+@media (max-width: 600px) {
+  .report-cassette {
+    width: 98vw;
+    padding: 0.7rem 0.5rem 1rem 0.5rem;
+  }
+  .report-cassette-image {
+    height: 120px;
+  }
 }    
